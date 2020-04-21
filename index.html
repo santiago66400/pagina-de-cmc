@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 ejercicios by Harold :D</title>
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+        <hr>
+        <!--Fin ejercicio 3------------>
+
+        <!-- ejercicio 4 -------------->
+        <h1>CÁLCULO DE ÁREAS</h1>
+        <button class="btn btn-outline-success" onclick="mostrarForm('triangulo');">triangulo</button>
+        <button class="btn btn-outline-success" onclick="mostrarForm('circulo');">circulo</button>
+
+        <BR></BR>
+        <form action="" id="contenidoForm" style="display:none" action="index.php" method="POST">
+
+        </form>
+        <script>
+            function mostrarForm(opcion) {
+                div = document.getElementById('contenidoForm');
+                div.style.display = '';
+                if (opcion == 'triangulo') {
+                    div.innerHTML = "<h3>formulario de triangulo</h3>";
+                    div.innerHTML = "<div class='form-group'><label for='email'>Ingrese Base:</label><input type='number' name='base' class='form-control' required></div><div class='form-group' ><label for='email'>Ingrese altura:</label><input type='number' name='altura' class='form-control' required></div><button  type='submit' class='btn btn-primary'>Ingresar</button><button   class='btn btn-danger' onclick='cancelar();'>Cancelar</button>";
+                }
+                if (opcion == 'circulo') {
+                    div.innerHTML = "<div class='form-group' ><label for='email'>Ingrese radio:</label><input type='number' name='radio' class='form-control' required></div><button  type='submit' class='btn btn-primary'>Ingresar</button><button   class='btn btn-danger' onclick='cancelar();'>Cancelar</button>";
+                }
+
+            }
+
+            function cancelar() {
+                div = document.getElementById('contenidoForm');
+                div.style.display = 'none';
+
+            }
+        </script>
+
+        <HR>
+        <!--Fin ejercicio 4------------>
+
+    </div>
+</body>
+
+</html>
